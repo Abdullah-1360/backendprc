@@ -1,5 +1,6 @@
 const express= require('express');
 const app=express();
+const usermodel=require('./usermodel');     
 app.use(express.json());
 app.get('/hi',(req,res)=>{
     console.log('hello');
