@@ -5,5 +5,11 @@
             "src": "backendprc/app.js",
             "use": "@vercel/node"
         }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/backendprc/app.js"
+        }
     ]
 }
