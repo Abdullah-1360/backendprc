@@ -1,8 +1,9 @@
 const mongoose=require('mongoose');
-mongoose.connect('mongodb+srv://text_stegano:text_stegano@cluster0.zhfof.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect('mongodb://127.0.0.1:27017/userdb');
 const userSchema=new mongoose.Schema({
     name:String,
     email:String,
     password:String
 });
+
 module.exports=mongoose.model('user',userSchema);
