@@ -8,7 +8,13 @@ app.get('/hi',(req,res)=>{
 });
 app.post('/register',async(req,res)=>{
 
-  let createduser=await usermodel.create(req.body.name,req.body.email,req.body.password); 
+  let createduser=await usermodel.create(
+    {
+      name:"abdullah",
+      email:"email",
+      password:"password"
+    }
+  ); 
   res.send(createduser);
 });
 PORT=process.env.PORT||3000;
