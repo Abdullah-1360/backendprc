@@ -6,13 +6,13 @@ app.get('/hi',(req,res)=>{
     console.log('hello');
     res.send('hello');
 });
-app.post('/register',async(req,res)=>{
-
+app.get('/register',async(req,res)=>{
+let {name,email,password}=req.body;
   let createduser=await usermodel.create(
     {
-      name:"abdullah",
-      email:"email",
-      password:"password"
+      name:name,
+      email:email,
+      password:password
     }
   ); 
   res.send(createduser);
