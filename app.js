@@ -7,6 +7,7 @@ app.get('/hi',(req,res)=>{
     console.log('hello');
     res.send('hello');
 });
+
 app.get('/register',async(req,res)=>{
 let {name,email,password}=req.body;
   let createduser=await usermodel.create(
