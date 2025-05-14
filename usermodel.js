@@ -7,7 +7,14 @@ mongoose.connect('mongodb+srv://new_user:123@cluster0.zhfof.mongodb.net/test?ret
 const userSchema = new mongoose.Schema({
     name: String,
     email: String,
-    password: String
+    password: String,
+    posts: 
+    [
+        {
+             type: mongoose.Schema.Types.ObjectId, ref: 'posts' 
+        }
+
+    ]
 });
 
 module.exports = mongoose.model('users', userSchema);
